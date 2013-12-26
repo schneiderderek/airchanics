@@ -40,16 +40,18 @@
    width: 100%;
 }
 
-.item {
-   border-style: solid;
-   border-color: gray;
-   border-width: 1px;
-   border-radius: 3px;
-   box-shadow: darkgray 2px 2px;
+.repair-item {
+   padding: 3%;
 }
 
-.item h5 {
+.repair-item h4 {
    text-align: center;
+}
+
+.repair-item img {
+   max-height: 18%;
+   margin-left: auto;
+   margin-right: auto;
 }
 
 .no-padding {
