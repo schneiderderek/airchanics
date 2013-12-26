@@ -41,9 +41,6 @@
 }
 
 .item {
-   width: 23%;
-   margin: 1%;
-   float: left;
    border-style: solid;
    border-color: gray;
    border-width: 1px;
