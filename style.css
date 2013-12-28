@@ -69,3 +69,7 @@
    margin: 0;
 }
 
+.service-list {
+   float: left;
+   margin-right: 10%;
+}

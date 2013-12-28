@@ -9,10 +9,27 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
    <script type="text/javascript">
+      var def = {
+         SEER: 'SEER is the Seasonal Energy Efficiency Ratio. Central air conditioners are rated according to their seasonal energy efficiency ratio (SEER). SEER indicates the relative amount of energy needed to provide a specific cooling output. Many older systems have SEER ratings of 6 or less. The minimum SEER allowed today is 13. Look for the ENERGY STAR® label for central air conditioners with SEER ratings of 13 or greater, but consider using air conditioning equipment with higher SEER ratings for greater energy savings.',
+         AFUE: 'AFUE stands for Annual Fuel Utilization Efficiency. Specifically, AFUE is the ratio of annual heat output of the furnace or boiler compared to the total annual fossil fuel energy consumed by a furnace or boiler. An AFUE of 90% means that 90% of the energy in the fuel becomes heat for the home and the other 10% escapes up the chimney and elsewhere. AFUE doesn\'t include the heat losses of the duct system or piping, which can be as much as 35% of the energy for output of the furnace when ducts are located in the attic, garage, or other partially conditioned or unconditioned space. When choosing a furnace system, the higher the AFUE rating the better.',
+         HSPF: 'HSPF stands for Heating Seasonal Performance Factor. Similar to SEER and AFUE, a higher HSPF rating corresponds to greater efficiency. This translates into greater energy savings.',
+         HVAC: 'HVAC stands for Heating Ventilation and Air Conditioning.'
+      }
+      
       $(document).ready(function(){
-         $("amana-tabs li a").click(function(e){
+         $("#type-tabs li a").click(function(e){
             e.preventDefault();
             $(this).tab('show');
+         });
+
+         $("a[rel=popover]").each(function(){
+            $(this).popover({
+               placement: 'auto',
+               html: true,
+               trigger: 'hover',
+               content: def[this.textContent],
+               title: this.textContent
+            });
          });
       });
    </script>
@@ -84,24 +101,64 @@
                <div class="panel panel-primary">
                   <div class="panel-heading"><h3 class="no-margin">Amana</h3></div>
                   <div class="panel-body">
-                     <p>Don&#39;t risk the loss of indoor comfort of your home. For long-lasting performance, we suggest you choose an Amana&reg; brand central air conditioning system in your home. Keep your home cool, lower your energy costs, and enjoy our best limited warranty protection for peace of mind. </p>
+                     <div class="row">
+                        <div class="col-md-8">
+                           <h4>Overview</h4>
+                           <p>Don&#39;t risk the loss of indoor comfort of your home. For long-lasting performance, we suggest you choose an Amana&reg; brand central air conditioning system in your home. Keep your home cool, lower your energy costs, and enjoy our best limited warranty protection for peace of mind. With the Amana&reg; brand reliable, long-lasting product performance is our top priority. We achieve that goal through superior craftsmanship and world-class manufacturing processes, which help ensure that Amana brand products are the best we can provide to you. To meet our high standards, our products go through our most rigorous quality assurance scrutiny.</p>
+                        </div>
+                        <img src="amana-ac.jpg" class="img-responsive col-md-2 col-md-offset-1" style="max-height:200px;">
+                     </div>
+                     <h4>Features Offered</h4>
+                     <ul>
+                        <li>13 - 18 <a rel="popover">SEER</a></li>
+                        <li>Lifetime Unit Replacement</li>
+                        <li>Lifetime Compressor Limited Warranty</li>
+                        <li>10 Year Parts Limited Warranty</li>
+                        <li>R-410A Eco-friendly Refrigerant</li>
+                     </ul>
                   </div>
                </div>
 
                <div class="panel panel-primary">
                   <div class="panel-heading"><h3 class="no-margin">Goodman</h3></div>
                   <div class="panel-body">
-                     <p>The Goodman brand has a central air conditioning system that is perfect for your home - at a refreshingly affordable price. Even on the hottest days of the year, you can keep your home cool and comfortable while enjoying low energy costs with a high-efficiency Goodman brand air conditioner. Don't choose between affordability, durability, and optimum cooling comfort. Install a Goodman brand air conditioner and get all three - and what we believe to be the best warranty protection in the heating and cooling industry. As you review the various Goodman brand air conditioners, remember that higher SEER numbers reflect the most energy-efficient systems.
-                     <br><br>
-                     All Goodman brand air conditioners come with outstanding warranty coverage. </p>
+                     <div class="row">
+                        <div class="col-md-8">
+                           <h4>Overview</h4>
+                           <p>The Goodman brand has a central air conditioning system that is perfect for your home - at a refreshingly affordable price. Even on the hottest days of the year, you can keep your home cool and comfortable while enjoying low energy costs with a high-efficiency Goodman brand air conditioner. Don't choose between affordability, durability, and optimum cooling comfort.  Install a Goodman brand air conditioner and get all three - and what we believe to be the best warranty protection in the heating and cooling industry. As you review the various Goodman brand air conditioners, remember that higher <a rel="popover">SEER</a> numbers reflect the most energy-efficient systems. All Goodman brand air conditioners come with outstanding warranty coverage.</p>
+                        </div>
+                        <img src="goodman-ac.jpg" class="col-md-2 col-md-offset-1">
+                     </div>
+                     <h4>Features Offered</h4>
+                     <ul>
+                        <li>13 - 18 <a rel="popover">SEER</a></li>
+                        <li>Lifetime Compressor Limited Warranty</li>
+                        <li>10 Year Unit Replacement Warranty</li>
+                        <li>10 Year Parts Limited Warranty</li>
+                        <li>R-410A Eco-friendly Refrigerant</li>
+                     </ul>
                   </div>
                </div>
 
                <div class="panel panel-primary">
                   <div class="panel-heading"><h3 class="no-margin">Westinghouse</h3></div>
-                  <div class="panel-body"><p>Durability and peace of mind are two things homeowners can expect from a Westinghouse air conditioner. By employing the latest innovations in craftsmanship and materials, a Westinghouse air conditioning unit is an industry leader. The iQ Drive® line of products can be rated all the way up to 25.5 SEER. Additionally, this wide range of products offers low noise levels and energy savings through compressor modulation; a process in which your air conditioner does not have to go through as many on/off cycles.
-                  <br><br>
-                  Furthermore, premium Westinghouse air conditioners are backed by a 10-year long parts warranty. This limited parts warranty covers any new part needed due to manufacturing defects. However, for additional insurance, homeowners can purchase the Contractors’ Preferred Protection Plan. If offered by your local contractor, this can cover the cost of labor during a system repair.</p>
+                  <div class="panel-body">
+                     <div class="row">
+                        <div class="col-md-8">
+                           <h4>Overview</h4>
+                           <p>Durability and peace of mind are two things homeowners can expect from a Westinghouse air conditioner. By employing the latest innovations in craftsmanship and materials, a Westinghouse air conditioning unit is an industry leader. The iQ Drive&reg; line of products can be rated all the way up to 25.5 <a rel="popover">SEER</a>. Additionally, this wide range of products offers low noise levels and energy savings through compressor modulation; a process in which your air conditioner does not have to go through as many on/off cycles.
+                           <br><br>
+                           Furthermore, premium Westinghouse air conditioners are backed by a 10-year long parts warranty. This limited parts warranty covers any new part needed due to manufacturing defects.</p>
+                        </div>
+                        <img src="westinghouse-ac.jpg" class="img-responsive col-md-2 col-md-offset-1">
+                     </div>
+                     <h4>Features Offered</h4>
+                     <ul>
+                        <li>13 - 25.5 <a rel="popover">SEER</a></li>
+                        <li>10 Year Parts Warranty</li>
+                        <li>10 Year Compressor Warranty</li>
+                        <li>R-410 Eco-friendly Refrigerant</li>
+                     </ul>
                   </div>
                </div>
             </div>
@@ -111,25 +168,62 @@
                <div class="panel panel-primary">
                   <div class="panel-heading"><h3 class="no-margin">Amana</h3></div>
                   <div class="panel-body">
-                     <h4>Premium Durability, Efficiency, Reliability, and Performance You Can Trust</h4>
-                     <p>Amana&reg; brand heat pumps are designed to provide both cooling and heating indoor comfort from a single unit. With the Amana&reg; brand reliable, long-lasting product performance is our top priority. We achieve that goal through superior craftsmanship and world-class manufacturing processes, which help ensure that Amana&reg; brand products are the best we can provide to you. To meet our high standards, our products go through our most rigorous quality-assurance scrutiny. And, be certain to compare our outstanding limited warranties on all Amana brand heat pumps. 
-                     For the greatest energy efficiency savings, select a heat pump system with the highest SEER and HSPF ratings.
-                     </p>
+                     <div class="row">
+                        <div class="col-md-8">
+                           <h4>Overview</h4>
+                           <p>Premium Durability, Efficiency, Reliability, and Performance You Can Trust. Amana&reg; brand heat pumps are designed to provide both cooling and heating indoor comfort from a single unit. With the Amana&reg; brand reliable, long-lasting product performance is our top priority. We achieve that goal through superior craftsmanship and world-class manufacturing processes, which help ensure that Amana&reg; brand products are the best we can provide to you. To meet our high standards, our products go through our most rigorous quality-assurance scrutiny. And, be certain to compare our outstanding limited warranties on all Amana brand heat pumps. For the greatest energy efficiency savings, select a heat pump system with the highest <a rel="popover">SEER</a> and <a rel="popover">HSPF</a> ratings.</p>
+                        </div>
+                        <img src="amana-heat-pump.jpg" class="img-responsive col-md-2 col-md-offset-1" style="max-height:200px;">
+                     </div>
+                     <h4>Features Offered</h4>
+                     <ul>
+                        <li>13 - 18 <a rel="popover">SEER</a></li>
+                        <li>Lifetime Unit Replacement Limited Warranty</li>
+                        <li>Lifetime Compressor Limited Warranty</li>
+                        <li>10 Year Parts Limited Warranty</li>
+                        <li>R-410A Eco-friendly Refrigerant</li>
+                     </ul>
                   </div>
                </div>
 
                <div class="panel panel-primary">
                   <div class="panel-heading"><h3 class="no-margin">Goodman</h3></div>
                   <div class="panel-body">
-                     <p>Enjoy year-round indoor comfort with a Goodman&reg; brand heat pump. These units provide both cooling and heating comfort from a single system. High-efficiency heat pumps can lower the cost of keeping your home completely comfortable all year. The Goodman brand offers a full line of heat pump systems so you are certain to find the perfect system to fit your budget. Plus you’ll get comfort from what we believe to be the best warranty protection in the heating and cooling industry. For the greatest energy-efficiency savings, select a heat pump system with the highest SEER and HSPF ratings.</p>
+                     <div class="row">
+                        <div class="col-md-8">
+                           <h4>Overview</h4>
+                           <p>Enjoy year-round indoor comfort with a Goodman&reg; brand heat pump. These units provide both cooling and heating comfort from a single system. High-efficiency heat pumps can lower the cost of keeping your home completely comfortable all year. The Goodman brand offers a full line of heat pump systems so you are certain to find the perfect system to fit your budget. Plus you will get comfort from what we believe to be the best warranty protection in the heating and cooling industry. For the greatest energy-efficiency savings, select a heat pump system with the highest <a rel="popover">SEER</a> and <a rel="popover">HSPF</a> ratings.</p>
+                        </div>
+                        <img src="goodman-heat-pump.jpg" class="img-responsive col-md-2 col-md-offset-1">
+                     </div>
+                     <h4>Features Offered</h4>
+                     <ul>
+                        <li>13 - 18 <a rel="popover">SEER</a></li>
+                        <li>Lifetime Compressor Warranty</li>
+                        <li>10 Year Replacement Limited Warranty</li>
+                        <li>10 Year Parts Limited Warranty</li>
+                        <li>R-410A Eco-friendly Refrigerant</li>
+                     </ul>
                   </div>
                </div>
 
                <div class="panel panel-primary">
                   <div class="panel-heading"><h3 class="no-margin">Westinghouse</h3></div>
                   <div class="panel-body">
-                     <h4>Versatile heating and cooling power in an efficient unit: Westinghouse heat pumps.</h4>
-                     <p>Homeowners residing in areas where temperatures are mild may want to explore a Westinghouse heat pump system. A heat pump is able to switch between heating and cooling settings in order to keep temperatures comfortable year-round. Like other Westinghouse products, heat pumps are factory checked 144 times before leaving the manufacturing plant in order to maintain high quality standards and live up to our quality pledge to consumers.<br><br>The processes that go into constructing a Westinghouse heat pump are aimed at providing an efficient, durable HVAC unit. For example, the louvered metal jacket with the 950-hour salt spray finish resists corrosion 50% better than standard finishes.</p>
+                     <div class="row">
+                        <div class="col-md-8">
+                           <h4>Overview</h4>
+                           <p>Versatile heating and cooling power in an efficient unit: Westinghouse heat pumps. Homeowners residing in areas where temperatures are mild may want to explore a Westinghouse heat pump system. A heat pump is able to switch between heating and cooling settings in order to keep temperatures comfortable year-round. Like other Westinghouse products, heat pumps are factory checked 144 times before leaving the manufacturing plant in order to maintain high quality standards and live up to our quality pledge to consumers.<br><br>The processes that go into constructing a Westinghouse heat pump are aimed at providing an efficient, durable <a rel="popover">HVAC</a> unit. For example, the louvered metal jacket with the 950-hour salt spray finish resists corrosion 50% better than standard finishes.</p>
+                        </div>
+                        <img src="westinghouse-heat-pump.jpg" class="col-md-2 col-md-offset-1 img-responsive">
+                     </div>
+                     <h4>Features Offered</h4>
+                     <ul>
+                        <li>13 - 22 <a rel="popover">SEER</a></li>
+                        <li>10 Year All Parts Warranty</li>
+                        <li>10 Year Compressor Warranty</li>
+                        <li>R-410A Refrigerant</li>
+                     </ul>
                   </div>
                </div>
             </div>
@@ -138,23 +232,73 @@
                <br>
                <div class="panel panel-primary">
                   <div class="panel-heading"><h3 class="no-margin">Amana</h3></div>
-                  <div class="panel-body"><p>With the Amana&reg; brand reliable, long-lasting product performance is our top priority. We achieve that goal through superior craftsmanship and world-class manufacturing processes, which help ensure that Amana brand products are the best we can provide to you. To meet our high standards, our products go through our most rigorous quality assurance scrutiny. Our engineers are constantly improving each Amana brand product by incorporating the very latest in technology, design and efficiency.<br><br>
-                  The full line of Amana&reg; brand gas furnaces use a unique, award-winning primary heat exchanger design that continues to set reliability records in our testing laboratory.<br><br>
-                  Modulating Gas Furnaces feature self-calibrating gas valves that allow modulating performance from 35% to 100% and offer outstanding levels of comfort, efficiency, and quiet performance.<br><br>
-                  Variable-Speed Gas Furnaces quickly, quietly, and efficiently deliver outstanding levels of warm comfort and reliability.<br><br>
-                  Multi-Speed Gas Furnaces offer reliable performance and time-tested durability and are designed to deliver quiet performance.</p>
+                  <div class="panel-body">
+                     <div class="row">
+                        <div class="col-md-8">
+                           <h4>Overview</h4>
+                           <p>With the Amana&reg; brand reliable, long-lasting product performance is our top priority. We achieve that goal through superior craftsmanship and world-class manufacturing processes, which help ensure that Amana brand products are the best we can provide to you. To meet our high standards, our products go through our most rigorous quality assurance scrutiny. Our engineers are constantly improving each Amana brand product by incorporating the very latest in technology, design and efficiency.<br><br>
+                           The full line of Amana&reg; brand gas furnaces use a unique, award-winning primary heat exchanger design that continues to set reliability records in our testing laboratory.<br><br>
+                           Modulating Gas Furnaces feature self-calibrating gas valves that allow modulating performance from 35% to 100% and offer outstanding levels of comfort, efficiency, and quiet performance.<br><br>
+                           Variable-Speed Gas Furnaces quickly, quietly, and efficiently deliver outstanding levels of warm comfort and reliability.<br><br>
+                           Multi-Speed Gas Furnaces offer reliable performance and time-tested durability and are designed to deliver quiet performance.</p>
+                        </div>
+                        <img src="amana-furnace.gif" class="col-md-2 col-md-offset-1 img-responsive">
+                     </div>
+                     <h4>Features Offered</h4>
+                     <ul>
+                        <li>80% - 96% <a rel="popover">AFUE</a> Performance</li>
+                        <li>Lifetime Unit Replacement Limited Warranty</li>
+                        <li>10 Year Parts Limited Warranty</li>
+                        <li>SureStart&reg; Technology</li>
+                        <li>Million-Air&reg; Heat Exchanger</li>
+                        <li>ComfortNet&trade; Compatible</li>
+                     </ul>
+                     <h4>Additional Information</h4>
+                     <p>For additional information give us a call at: (937) 426-4022. You can also visit the manufacture's website to learn more about Amana furnaces: <a href="http://www.amana-hac.com/Products/GasFurnaces/AboutOurFurnaces/tabid/1865/Default.aspx" target="_blank">About Amana Furnaces</a></p>
                   </div>
                </div>
 
                <div class="panel panel-primary">
                   <div class="panel-heading"><h3 class="no-margin">Goodman</h3></div>
-                  <div class="panel-body"><p>Goodman brand gas furnaces can deliver warm, money-saving indoor comfort year after year to your home. Variable and multi-speed furnaces can provide enhanced indoor comfort by slowly ramping up to your thermostat setting rather than simply turning on at full speed. This alleviates the ‘cold air blow’ often associated with single-speed furnaces. Choose from a full line of Goodman brand gas furnaces that we believe offer the best warranty protection in the heating and cooling industry. To find a gas furnace that delivers maximum energy efficiency and savings, select a unit with the highest AFUE rating.</p>
+                  <div class="panel-body">
+                     <div class="row">
+                        <div class="col-md-8">
+                           <h4>Overview</h4>
+                           <p>Goodman brand gas furnaces can deliver warm, money-saving indoor comfort year after year to your home. Variable and multi-speed furnaces can provide enhanced indoor comfort by slowly ramping up to your thermostat setting rather than simply turning on at full speed. This alleviates the ‘cold air blow’ often associated with single-speed furnaces. Choose from a full line of Goodman brand gas furnaces that we believe offer the best warranty protection in the heating and cooling industry. To find a gas furnace that delivers maximum energy efficiency and savings, select a unit with the highest <a rel="popover">AFUE</a> rating.</p>
+                        </div>
+                        <img src="goodman-furnace.jpg" class="col-md-2 col-md-offset-1 img-responsive">
+                     </div>
+                     <h4>Features Offered</h4>
+                     <ul>
+                        <li>80% - 96% <a rel="popover">AFUE</a> Performance</li>
+                        <li>Lifetime Heat Exchange Limited warranty</li>
+                        <li>10 Year Unit Replacement Warranty Limited Warranty</li>
+                        <li>10 Year Parts Limited Warranty</li>
+                        <li>ComfortNet&trade; Compatible</li>
+                     </ul>
+                     <h4>Additional Information</h4>
+                     <p>For additional information give us a call at: (937) 426-4022. You can also visit the manufacture's website to learn more about Goodman furnaces: <a href="http://www.goodmanmfg.com/ResidentialProducts/GasFurnaces/AboutOurFurnaces/tabid/1854/Default.aspx" target="_blank">About Goodman Furnaces</a></p>
                   </div>
                </div>
 
                <div class="panel panel-primary">
                   <div class="panel-heading"><h3 class="no-margin">Westinghouse</h3></div>
-                  <div class="panel-body"><p>Westinghouse units contain industry-leading technology designed to ensure that homeowners are receiving the best heating unit: like SmartLite® technology. The SmartLite technology system is geared at extending the life of the igniter in the furnace. The igniter is able to learn the unique startup characteristics of the specific heating unit and turn on at just the right time, increasing the lifespan of the igniter.<br><br>Not to mention, all Westinghouse gas furnaces meet high quality and reliability standards backed by numerous factory checks - each unit is checked 234 times - and a 10-year long parts warranty.</p>
+                  <div class="panel-body">
+                     <div class="row">
+                        <div class="col-md-8">
+                           <h4>Overview</h4>
+                           <p>Westinghouse units contain industry-leading technology designed to ensure that homeowners are receiving the best heating unit: like SmartLite&reg; technology. The SmartLite technology system is geared at extending the life of the igniter in the furnace. The igniter is able to learn the unique startup characteristics of the specific heating unit and turn on at just the right time, increasing the lifespan of the igniter.<br><br>Not to mention, all Westinghouse gas furnaces meet high quality and reliability standards backed by numerous factory checks - each unit is checked 234 times - and a 10-year long parts warranty.</p>
+                        </div>
+                        <img src="westinghouse-furnace.jpg" class="col-md-2 col-md-offset-1 img-responsive">
+                     </div>
+                     <h4>Features Offered</h4>
+                     <ul>
+                        <li>80% - 97% <a rel="popover">AFUE</a> Performance</li>
+                        <li>10 Year All Parts Warranty</li>
+                        <li>10 Year Heat Exchanger (Unit Replacement) Warranty</li>
+                     </ul>
+                     <h4>Additional Information</h4>
+                     <p>For additional information give us a call at: (937) 426-4022. You can also visit the manufacture's website to learn more about Westinghouse furnaces: <a href="http://www.westinghousehvac.com/Furnaces-s/62.htm" target="_blank">About Westinghouse Furnaces</a></p>
                   </div>
                </div>
             </div>
@@ -162,7 +306,7 @@
       </div>
 
       <div class="footer">
-         <hr><p>Copyright 2013 AirChanics of Ohio</p>
+         <hr><p>Copyright 2014 AirChanics of Ohio</p>
       </div>
    </div>
 
@@ -172,9 +316,9 @@
      _gaq.push(['_trackPageview']);
 
      (function() {
-       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
      })();
    </script>
 </body>
