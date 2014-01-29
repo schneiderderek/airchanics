@@ -12,7 +12,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
    <style type="text/css">
-      #map-canvas { height: 500px; width: 50%;}
+      #map-canvas { height: 500px; width: 100%;}
    </style>
 </head>
 <body>
@@ -50,14 +50,23 @@
             <h1>About Us <small>Customer satisfaction is our #1 priority</small></h1>
          </div>
 
-         <p class="lead">We diagnose, repair and maintain all major brands of heating and cooling systems to suit a variety of budgets and needs. Whether you have a specific problem or looking for a tune-up, we are here to help! Call us today for more information or to schedule a service call: (937) 426-4022</p>
+         <!-- <p class="lead">We diagnose, repair and maintain all major brands of heating and cooling systems to suit a variety of budgets and needs. Whether you have a specific problem or looking for a tune-up, we are here to help! Call us today for more information or to schedule a service call: (937) 426-4022</p> -->
 
-         <div id="map-canvas">
-            
+         <div class="row">
+            <div class="col-md-6">
+               <h3>About the Owner</h3>
+               <p>Hello! My name is John and I am the proud owner of AirChanics of Ohio Heating and Cooling. I have over 25 years of experience in installation and repair of residential and commercial heating and air conditioning systems. As an Army veteran I have the dedication to provide our custoners with the highest quality and consistency of service.</p>
+               <br>
+               <h3>Ways to Contact Us</h3>
+               <ul>
+                  <li></li>
+               </ul>
+            </div>
+            <div class="col-md-6"><h3>Service Map</h3><div id="map-canvas"></div></div>
          </div>
 
          <div class="footer">
-            <hr><p>Copyright 2014 AirChanics of Ohio</p>
+            <hr><p>Copyright 2014 AirChanics of Ohio Heating and Cooling</p>
          </div>
       </div>
    </div>
@@ -80,13 +89,37 @@
    <script type="text/javascript">
       function initialize() {
          var mapOptions = {
-            center: new google.maps.LatLng(39.758936, -84.192352),
-            zoom: 9
+            center: new google.maps.LatLng(39.758901, -84.123688),
+            zoom: 10
          };
+
          var map = new google.maps.Map(document.getElementById("map-canvas"),
          mapOptions);
+
+         var locCoordinates = [
+            new google.maps.LatLng(39.669142, -83.868256),
+            new google.maps.LatLng(39.929748, -83.798218),
+            new google.maps.LatLng(39.964491, -84.189606),
+            new google.maps.LatLng(39.746266, -84.402466),
+            new google.maps.LatLng(39.549589, -84.277496),
+            new google.maps.LatLng(39.518874, -84.082489),
+            new google.maps.LatLng(39.669142, -83.868256)
+         ];
+
+         serviceMap = new google.maps.Polygon({
+            paths: locCoordinates,
+            strokeColor: '#FF0000',
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: '#FF0000',
+            fillOpacity: 0.35
+         });
+
+         serviceMap.setMap(map);
       }
+
       google.maps.event.addDomListener(window, 'load', initialize);
+
    </script>
 </body>
 </html>
