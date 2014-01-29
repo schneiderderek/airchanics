@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>AirChanics of Ohio</title>
+   <meta name="description" content="AirChanics of Ohio Heating and Air Conditioning is focused on exceeding your expectations by providing you the highest-quality service, products, and customer satisfaction. We specialize in the: installation, diagnosis, repair, and maintenance of all major brands of heating, ventilation, and cooling systems for residential homes and light commercial facilities.">
+   <meta name="keywords" content="heating cooling air conditioning heat furnace furnaces conditioners install repair hvac and airchanics AirChanics of Ohio, Dayton, OH AirChanics Heating and Cooling Heating & Cooling Heating and Air Conditioning Heating & Air Conditioning Goodman Amana Bryant Carrier Trane">
+   <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+   <link rel="stylesheet" type="text/css" href="style.css">
+   <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <style type="text/css">
+      #map-canvas { height: 500px; width: 50%;}
+   </style>
+</head>
+<body>
+   <nav class="navbar navbar-default" role="navigation">
+      <div class="navbar-header">
+         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+         </button>
+         <a class="navbar-brand" href="index.html">AirChanics Heating and Air</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+         <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="repair.html">Repair Services</a></li>
+            <li><a href="new.html">New Installations</a></li>
+            <li class="active"><a href="about.html">About Us</a></li>
+         </ul>
+         <ul class="nav navbar-nav navbar-right">
+            <li><a class="icon-link" href="mailto:airchanics@gmail.com" style="padding:0;"><img class="icon" src="email.png" alt="Email"></a></li>
+            <li><a class="icon-link" href="http://www.facebook.com/airchanicsofohio" target="_blank" style="padding:0;"><img class="icon" src="facebook.png" alt="Facebook"></a></li>
+            <li><a href="https://plus.google.com/107964912891951329356" target="_blank" style="padding:0;"><img class="icon" src="googleplus.png" alt="Google+"></a></li>
+            <li><img class="icon" src="phone.png" alt="Phone"></li>
+            <li><p class="navbar-text">Call Us: <a id="tel-link" href="tel:937-426-4022">937-426-4022</a></p></li>
+         </ul>
+      </div>
+   </nav>
+
+   <div class="container">
+      <div class="row">
+         <div class="page-header" style="margin-top:0;">
+            <h1>About Us <small>Customer satisfaction is our #1 priority</small></h1>
+         </div>
+
+         <p class="lead">We diagnose, repair and maintain all major brands of heating and cooling systems to suit a variety of budgets and needs. Whether you have a specific problem or looking for a tune-up, we are here to help! Call us today for more information or to schedule a service call: (937) 426-4022</p>
+
+         <div id="map-canvas">
+            
+         </div>
+
+         <div class="footer">
+            <hr><p>Copyright 2014 AirChanics of Ohio</p>
+         </div>
+      </div>
+   </div>
+
+   <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-35510225-3']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+   </script>
+
+   <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1Mcea3l3rjEJZk9D6yd2u3UpVGdJnnDE&sensor=false"> -->
+   <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false">
+   </script>
+   <script type="text/javascript">
+      function initialize() {
+         var mapOptions = {
+            center: new google.maps.LatLng(39.758936, -84.192352),
+            zoom: 9
+         };
+         var map = new google.maps.Map(document.getElementById("map-canvas"),
+         mapOptions);
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+   </script>
+</body>
+</html>
