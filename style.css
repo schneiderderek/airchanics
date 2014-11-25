@@ -9,12 +9,13 @@
    overflow: auto;
    float: left;
    margin-bottom: 3%;
+   padding: 5%;
 }
 
 #overview-panel .panel {
    float: left;
-   width: 29%;
-   margin: 0% 2%; 
+   width: 40%;
+   margin: 0% 2%;
 }
 
 .icon {
